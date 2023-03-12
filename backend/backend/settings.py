@@ -42,7 +42,7 @@ DJANGO_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
-    'django_vite',
+    # 'django_vite',
 
 ]
 
@@ -74,7 +74,7 @@ ROOT_URLCONF = 'backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [ BASE_DIR / 'templates' ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -136,6 +136,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATICFILES_DIR = BASE_DIR / 'static'
+
+STATICFILES_DIRS = [
+    STATICFILES_DIR
+]
+
+STATIC_ROOT = BASE_DIR / 'static_root'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-gray-50">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- CSS only -->
+    <link rel="stylesheet" type="text/css" href="{% static 'custom/custom.css' %}" />
+
+    <title>{% block title %}Dodam.one{% endblock %}</title>
+  </head>
+  <body class="h-full">
+    {% block content %} {% endblock content %}
+  </body>
+</html>
