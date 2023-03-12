@@ -16,6 +16,8 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+APPS_DIR = BASE_DIR / "core_apps"
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -27,17 +29,35 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
 ]
+
+THIRD_PARTY_APPS = [
+    'django_vite',
+
+]
+
+LOCAL_APPS = [
+    # "core_apps.users",
+    "core_apps.common",
+    # "core_apps.store",
+    # "core_apps.human",
+    # "core_apps.shift",
+    # "core_apps.transaction",
+    # "core_apps.dispatch",
+    # "core_apps.upgrade",
+]
+
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
