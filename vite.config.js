@@ -4,8 +4,8 @@ const { resolve } = require('path');
  
 export default defineConfig({
 
-  root: resolve('./my_dvv_demo/src'),
-  base: '/backend/static/frontend/',
+  root: resolve('./static/src'),
+  base: '/static/',
 
   // This server is for vite for DEV
   server: {
@@ -22,7 +22,7 @@ export default defineConfig({
   },
   // building assets for production
   build: {
-    outDir: resolve('./backend/static/frontend'),
+    outDir: resolve('./static/dist'),
     assetsDir: '',
     manifest: true,
     emptyOutDir: true,
@@ -30,7 +30,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         // js entrypoint
-        main: resolve('./my_dvv_demo/src/js/main.js'),
+        main: resolve('./static/src/js/main.js'),
       },
       output: {
         chunkFileNames: undefined,
