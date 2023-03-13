@@ -74,7 +74,7 @@ ROOT_URLCONF = 'backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [ BASE_DIR / 'templates' ],
+        'DIRS': [ BASE_DIR / "templates" ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -137,9 +137,16 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# Where ViteJS assets are built.
+DJANGO_VITE_ASSETS_PATH = BASE_DIR / "static" / "frontend"
+
+# If use HMR or not.
+DJANGO_VITE_DEV_MODE = DEBUG
+
 STATICFILES_DIR = BASE_DIR / 'static'
 
 STATICFILES_DIRS = [
+    DJANGO_VITE_ASSETS_PATH,
     STATICFILES_DIR
 ]
 

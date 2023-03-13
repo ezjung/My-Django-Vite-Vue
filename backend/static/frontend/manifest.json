@@ -1,0 +1,14 @@
+{
+  "../../home/sung/Templates/my-dvv/my_dvv_demo/src/js/main.css": {
+    "file": "main-9ef4b1a4.css",
+    "src": "../../home/sung/Templates/my-dvv/my_dvv_demo/src/js/main.css"
+  },
+  "../../home/sung/Templates/my-dvv/my_dvv_demo/src/js/main.js": {
+    "css": [
+      "main-9ef4b1a4.css"
+    ],
+    "file": "main-8a81241c.js",
+    "isEntry": true,
+    "src": "../../home/sung/Templates/my-dvv/my_dvv_demo/src/js/main.js"
+  }
+}

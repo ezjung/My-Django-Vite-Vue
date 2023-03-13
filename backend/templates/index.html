@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load django_vite %}
+
+{% block content %}
+
+{% vite_hmr_client %}
+{% vite_asset '/my_dvv_demo/src/js/main.js' %}
+
+<h2>{{ django_message }}</h2>
+
+<p>This page has been generated from a Django template.</p>
+<p>The CSS was loaded by Vite.</p>
+<p>Everything inside the box was rendered by Vue.</p>
+<p>Vite is a way to integrate Vue into an existing Django project.</p>
+
+<br>
+
+<div id="app">
+
+</div>
+
+{% endblock %}
