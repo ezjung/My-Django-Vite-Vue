@@ -1,3 +1,4 @@
-import '../css/style.css';
+import '../css/style.css'
+// import 'vite/modulepreload-polyfill'
 
-console.log('Hello from Django Vite example !')
+console.log('Hello from Django Vite example right ?!')
